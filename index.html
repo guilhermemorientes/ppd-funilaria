@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funilaria - Excelência em Reparo Automotivo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.webp">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Funilaria</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#services" class="nav-link">Serviços</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                <li><a href="#testimonials" class="nav-link">Depoimentos</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background" style="background-image: url('/img/hero-bg.webp');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Transformamos Seu Carro com <span class="highlight">Perfeição</span></h1>
+                <p>Mais de 15 anos de experiência em funilaria e pintura automotiva. Devolvemos a beleza original do seu veículo com qualidade profissional e garantia total.</p>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Garantia de 2 Anos</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <span>Entrega Rápida</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-award"></i>
+                        <span>Qualidade Premium</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-form">
+                <form class="contact-form" id="hero-form">
+                    <h3>Solicite seu Orçamento</h3>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Seu E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Seu Telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="service" required>
+                            <option value="">Selecione o Serviço</option>
+                            <option value="funilaria-pintura">Funilaria e Pintura</option>
+                            <option value="martelinho-ouro">Martelinho de Ouro</option>
+                            <option value="polimento">Polimento e Enceramento</option>
+                            <option value="para-choque">Reparo de Para-choque</option>
+                            <option value="restauracao">Restauração Completa</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Descreva o problema do seu veículo" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Solicitar Orçamento
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sobre a Funilaria</h2>
+                <p>Excelência e tradição em reparo automotivo</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>A Funilaria é uma empresa especializada em funilaria e pintura automotiva, com mais de 15 anos de experiência no mercado. Nossa missão é devolver a beleza original do seu veículo com a mais alta qualidade e tecnologia disponível.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>5000+</h4>
+                            <p>Veículos Restaurados</p>
+                        </div>
+                        <div class="stat">
+                            <h4>15+</h4>
+                            <p>Anos de Experiência</p>
+                        </div>
+                        <div class="stat">
+                            <h4>98%</h4>
+                            <p>Clientes Satisfeitos</p>
+                        </div>
+                    </div>
+
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-tools"></i>
+                            <div>
+                                <h4>Equipamentos Modernos</h4>
+                                <p>Utilizamos tecnologia de ponta para garantir resultados perfeitos</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Equipe Especializada</h4>
+                                <p>Profissionais certificados e com vasta experiência no setor</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-medal"></i>
+                            <div>
+                                <h4>Qualidade Garantida</h4>
+                                <p>Oferecemos garantia de 2 anos em todos os nossos serviços</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="/img/about-oficina.webp" alt="Oficina Funilaria">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Serviços</h2>
+                <p>Soluções completas para seu veículo</p>
+            </div>
+            <div class="services-content">
+                <div class="services-slider">
+                    <div class="slider-container">
+                        <div class="slide active">
+                            <img src="/img/servico-funilaria-pintura.webp" alt="Funilaria e Pintura">
+                        </div>
+                        <div class="slide">
+                            <img src="/img/servico-martelinho-ouro.webp" alt="Martelinho de Ouro">
+                        </div>
+                        <div class="slide">
+                            <img src="/img/servico-polimento.webp" alt="Polimento">
+                        </div>
+                        <div class="slide">
+                            <img src="/img/servico-para-choque.webp" alt="Para-choque">
+                        </div>
+                        <div class="slide">
+                            <img src="/img/servico-restauracao.webp" alt="Restauração">
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="services-list">
+                    <div class="service-item active" data-slide="0">
+                        <i class="fas fa-paint-brush"></i>
+                        <div>
+                            <h4>Funilaria e Pintura</h4>
+                        </div>
+                    </div>
+                    <div class="service-item" data-slide="1">
+                        <i class="fas fa-hammer"></i>
+                        <div>
+                            <h4>Martelinho de Ouro</h4>
+                        </div>
+                    </div>
+                    <div class="service-item" data-slide="2">
+                        <i class="fas fa-gem"></i>
+                        <div>
+                            <h4>Polimento e Enceramento</h4>
+                        </div>
+                    </div>
+                    <div class="service-item" data-slide="3">
+                        <i class="fas fa-car-crash"></i>
+                        <div>
+                            <h4>Reparo de Para-choque</h4>
+                        </div>
+                    </div>
+                    <div class="service-item" data-slide="4">
+                        <i class="fas fa-magic"></i>
+                        <div>
+                            <h4>Restauração Completa</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nosso Portfólio</h2>
+                <p>Veja a transformação dos veículos</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-images">
+                        <div class="before-after">
+                            <div class="before">
+                                <img src="/img/portfolio-civic-antes.webp" alt="Honda Civic Antes">
+                                <span class="label">Antes</span>
+                            </div>
+                            <div class="after">
+                                <img src="/img/portfolio-civic-depois.webp" alt="Honda Civic Depois">
+                                <span class="label">Depois</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Reparo Completo - Honda Civic</h4>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-images">
+                        <div class="before-after">
+                            <div class="before">
+                                <img src="/img/portfolio-golf-antes.webp" alt="Volkswagen Golf Antes">
+                                <span class="label">Antes</span>
+                            </div>
+                            <div class="after">
+                                <img src="/img/portfolio-golf-depois.webp" alt="Volkswagen Golf Depois">
+                                <span class="label">Depois</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Restauração - Volkswagen Golf</h4>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-images">
+                        <div class="before-after">
+                            <div class="before">
+                                <img src="/img/portfolio-corolla-antes.webp" alt="Toyota Corolla Antes">
+                                <span class="label">Antes</span>
+                            </div>
+                            <div class="after">
+                                <img src="/img/portfolio-corolla-depois.webp" alt="Toyota Corolla Depois">
+                                <span class="label">Depois</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Para-choque - Toyota Corolla</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>O que Nossos Clientes Dizem</h2>
+                <p>Depoimentos reais de clientes satisfeitos</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Excelente trabalho! Meu carro ficou como novo. A equipe é muito profissional e o prazo foi cumprido rigorosamente. Recomendo!"</p>
+                        <div class="testimonial-author">
+                            <strong>Carlos Silva</strong>
+                            <span>Honda Civic 2019</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Atendimento excepcional desde o primeiro contato. O orçamento foi justo e o resultado superou minhas expectativas. Voltarei sempre!"</p>
+                        <div class="testimonial-author">
+                            <strong>Maria Santos</strong>
+                            <span>Volkswagen Polo 2020</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Profissionais competentes e honestos. Explicaram todo o processo e mantiveram a qualidade prometida. Muito satisfeito!"</p>
+                        <div class="testimonial-author">
+                            <strong>João Oliveira</strong>
+                            <span>Toyota Corolla 2018</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Entre em Contato</h2>
+                <p>Solicite seu orçamento sem compromisso</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <h3>Fale Conosco</h3>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Seu Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Seu E-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Seu Telefone" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="service" required>
+                                <option value="">Selecione o Serviço</option>
+                                <option value="funilaria-pintura">Funilaria e Pintura</option>
+                                <option value="martelinho-ouro">Martelinho de Ouro</option>
+                                <option value="polimento">Polimento e Enceramento</option>
+                                <option value="para-choque">Reparo de Para-choque</option>
+                                <option value="restauracao">Restauração Completa</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Descreva o problema do seu veículo" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.4422208291403!2d-46.89218262468121!3d-23.19054927905635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf275040e71393%3A0xad3452a7e7fd6bc1!2sAlphaville%20Urbanismo%20S.A!5e0!3m2!1spt-BR!2sbr!4v1754267488069!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-car"></i>
+                        <span>Funilaria</span>
+                    </div>
+                    <p>Excelência em funilaria e pintura automotiva há mais de 15 anos. Transformamos seu veículo com qualidade e garantia.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#services">Funilaria e Pintura</a></li>
+                        <li><a href="#services">Martelinho de Ouro</a></li>
+                        <li><a href="#services">Polimento</a></li>
+                        <li><a href="#services">Reparo de Para-choque</a></li>
+                        <li><a href="#services">Restauração</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#testimonials">Depoimentos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Rua das Oficinas, 123, Alphaville</p>
+                        <p><i class="fas fa-phone"></i> (11) 4002-8922</p>
+                        <p><i class="fas fa-envelope"></i> contato@funilaria.com.br</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Funilaria. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
