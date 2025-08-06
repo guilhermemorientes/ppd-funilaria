@@ -106,7 +106,7 @@ function handleFormSubmit(formId) {
 
     setTimeout(() => {
       button.innerHTML = '<i class="fas fa-check"></i> Enviado com Sucesso!'
-      button.style.background = "#27ae60"
+      button.style.background = "var(--primary-color)"
 
       setTimeout(() => {
         button.innerHTML = originalText
@@ -142,7 +142,7 @@ function showNotification(message, type = "info") {
         position: fixed;
         top: 100px;
         right: 20px;
-        background: ${type === "success" ? "#27ae60" : "#3498db"};
+        background: ${type === "success" ? "var(--primary-color)" : "#3498db"};
         color: white;
         padding: 15px 20px;
         border-radius: 10px;
@@ -290,5 +290,113 @@ whatsappButton.addEventListener("mouseleave", () => {
 })
 
 document.body.appendChild(whatsappButton)
+
+// Color Selector System
+class ColorSelector {
+  constructor() {
+    this.colors = {
+      red: { primary: '#EA4335', hover: '#C53030', light: 'rgba(234, 67, 53, 0.1)', shadow: 'rgba(234, 67, 53, 0.3)' },
+      blue: { primary: '#4285F4', hover: '#1a73e8', light: 'rgba(66, 133, 244, 0.1)', shadow: 'rgba(66, 133, 244, 0.3)' },
+      yellow: { primary: '#FBBC05', hover: '#ea8600', light: 'rgba(251, 188, 5, 0.1)', shadow: 'rgba(251, 188, 5, 0.3)' },
+      green: { primary: '#34A853', hover: '#137333', light: 'rgba(52, 168, 83, 0.1)', shadow: 'rgba(52, 168, 83, 0.3)' }
+    }
+    
+    this.currentColor = localStorage.getItem('selectedColor') || 'red'
+    this.init()
+  }
+
+  init() {
+    this.createColorSelector()
+    this.applyColor(this.currentColor)
+    this.bindEvents()
+  }
+
+  createColorSelector() {
+    const colorSelector = document.createElement('div')
+    colorSelector.className = 'color-selector'
+    colorSelector.innerHTML = `
+      <button class="color-toggle">
+        <i class="fas fa-palette"></i>
+      </button>
+      <div class="color-options">
+        <div class="color-selector-label">Escolha a Cor</div>
+        <div class="color-option red ${this.currentColor === 'red' ? 'active' : ''}" data-color="red"></div>
+        <div class="color-option blue ${this.currentColor === 'blue' ? 'active' : ''}" data-color="blue"></div>
+        <div class="color-option yellow ${this.currentColor === 'yellow' ? 'active' : ''}" data-color="yellow"></div>
+        <div class="color-option green ${this.currentColor === 'green' ? 'active' : ''}" data-color="green"></div>
+      </div>
+    `
+    
+    document.body.appendChild(colorSelector)
+    this.selector = colorSelector
+  }
+
+  bindEvents() {
+    const toggle = this.selector.querySelector('.color-toggle')
+    const options = this.selector.querySelectorAll('.color-option')
+
+    toggle.addEventListener('click', () => {
+      this.selector.classList.toggle('expanded')
+    })
+
+    options.forEach(option => {
+      option.addEventListener('click', () => {
+        const color = option.dataset.color
+        this.selectColor(color)
+      })
+    })
+
+    // Close selector when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!this.selector.contains(e.target)) {
+        this.selector.classList.remove('expanded')
+      }
+    })
+  }
+
+  selectColor(color) {
+    this.currentColor = color
+    localStorage.setItem('selectedColor', color)
+    
+    // Update active state
+    this.selector.querySelectorAll('.color-option').forEach(option => {
+      option.classList.remove('active')
+    })
+    this.selector.querySelector(`[data-color="${color}"]`).classList.add('active')
+    
+    this.applyColor(color)
+    this.selector.classList.remove('expanded')
+    
+    // Show notification
+    const colorNames = {
+      red: 'Vermelho',
+      blue: 'Azul', 
+      yellow: 'Amarelo',
+      green: 'Verde'
+    }
+    
+    showNotification(`Cor alterada para ${colorNames[color]}!`, 'success')
+  }
+
+  applyColor(color) {
+    const colorData = this.colors[color]
+    const root = document.documentElement
+    
+    root.style.setProperty('--primary-color', colorData.primary)
+    root.style.setProperty('--primary-hover', colorData.hover)
+    root.style.setProperty('--primary-light', colorData.light)
+    root.style.setProperty('--primary-shadow', colorData.shadow)
+    
+    // Update toggle button color
+    const toggle = this.selector.querySelector('.color-toggle')
+    toggle.style.background = colorData.primary
+    toggle.style.boxShadow = `0 4px 15px ${colorData.shadow}`
+  }
+}
+
+// Initialize color selector when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  new ColorSelector()
+})
 
 console.log("AutoCare Funilaria - Website loaded successfully!")
